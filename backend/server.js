@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona', {
 
 if(process.env.Node_ENV === "production"){
 
-  app.use(express.static("/frontendfrontend/build"));
+  app.use(express.static("/frontend/build"));
   app.get("*",(req,res)=>{
     res.sendFile(path.resolve(__dirname,'/frontend','build','index.html'));
   });
