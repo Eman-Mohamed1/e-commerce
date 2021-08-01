@@ -23,9 +23,10 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona', {
 // });
 
 
-if(process.env.Node_ENV==="production"){
+if(process.env.Node_ENV === "production"){
   app.use(express.static("../frontend/build"));
 }
+// app.use("*")
 
 
 
