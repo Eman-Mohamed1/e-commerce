@@ -38,7 +38,7 @@ else{
     res.send('Server is ready');
   });
 }
-console.log(Node_ENV);
+console.log(Node.env);
 
 
 app.use('/api/users', userRouter);
