@@ -7,9 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":"cd frontend && npm run build",
-    "install_frontend":"cd frontend && npm install && npm start",
+    "install_frontend":"cd frontend && npm install ",
     "heroku-postbuild":"npm run install_frontend && npm run build ",
-    "start":"node backend/server.js "
+    "start":"node backend/server.js ",
+    "frontend": "npm start --prefix frontend"
     },
   "author": "",
   "license": "ISC",
