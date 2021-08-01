@@ -6,20 +6,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-   
-    "install_frontend":"cd frontend && npm install ",
-    "heroku-postbuild":"npm run install_frontend && npm run build ",
-    "start":"node backend/server.js ",
+    "install_frontend": "cd frontend && npm install ",
+    "heroku-postbuild": "npm run install_frontend && npm run build ",
+    "start": "node backend/server.js ",
     "frontend": "npm start --prefix frontend"
-    },
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "concurrently": "^6.2.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.13.2",
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
-    "dotenv": "^8.2.0"
+    "mongoose": "^5.13.2"
   }
 }
