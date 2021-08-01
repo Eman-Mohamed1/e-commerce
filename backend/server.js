@@ -4,6 +4,7 @@ import dotenv from 'dotenv';//for sec info
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
+import path from 'path'
 
 dotenv.config();
 
@@ -25,8 +26,13 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona', {
 
 if(process.env.Node_ENV === "production"){
   app.use(express.static("../frontend/build"));
+  app.get("*",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'../frontend','build','index.html'));
+  });
+  
 }
-// app.use("*")
+
+
 
 
 
