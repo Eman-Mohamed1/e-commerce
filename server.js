@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());//midleware that parse body of post req so u can use it 
 app.use(express.urlencoded({ extended: true }));//midleware to attach body of post req to req.body 
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona', {
+mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://Eman_classy:test1234@cluster0.3pqa5.mongodb.net/classyDB?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -33,8 +33,6 @@ if(process.env.Node_ENV === "production"){
   });
   
 }
-
-
   app.get('/', (req, res) => {
     res.send('Server is running');
   });
