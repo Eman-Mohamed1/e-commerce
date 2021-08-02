@@ -34,13 +34,10 @@ if(process.env.Node_ENV === "production"){
   
 }
 
-else{
+
   app.get('/', (req, res) => {
     res.send('Server is running');
   });
-}
-
-
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
