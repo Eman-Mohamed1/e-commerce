@@ -4,10 +4,11 @@ import dotenv from 'dotenv';//for sec info
 import productRouter from './backend/routers/productRouter.js';
 import userRouter from './backend/routers/userRouter.js';
 import orderRouter from './backend/routers/orderRouter.js';
-import path from 'path'
+import path from 'path';
+import { dirname } from 'path';
 
 dotenv.config();
-
+const __dirname = dirname(__filename);
 const app = express();
 app.use(express.json());//midleware that parse body of post req so u can use it 
 app.use(express.urlencoded({ extended: true }));//midleware to attach body of post req to req.body 
